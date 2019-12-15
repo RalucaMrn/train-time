@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header-menu h3 {
+  padding-top: 38 px;
+  padding-bottom: 38 px;
+  display: inline-block;
+}
+
+.header-menu nav {
+  float: right;
+}
+
+.header-menu nav ul {
+  list-style-type: none;
+}
+
+.header-menu nav li {
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.57);
+  font-weight: 500;
+  margin: initial;
+}
+
+.globe {
+  padding-right: 10px;
+}
