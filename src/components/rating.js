@@ -6,7 +6,7 @@ export default class Rating extends React.Component {
     const stars = []
     for (var i = 0; i < max; i++) {
       const state = i < score ? "on" : "off"
-      stars.push(<Star state={state} />)
+      stars.push(<Star key={i} state={state} />)
     } 
     return stars
   }
@@ -22,14 +22,3 @@ export default class Rating extends React.Component {
     );
   }
 }
-
-
-    // <Rating rating="{review.rating}" max="5"/>
-    // Rating face
-    // - vede cate sunt maxim (5)
-    // - le randeaza pe rand
-    // - cand le randeaza le seteaza si starea (on/off)
-    // array.forEach((element, key) => {
-    //   const starState = key <= rating ? 1 : 0
-    //     < RatingStar state ="{starState}" />
-    // });

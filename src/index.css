@@ -39,3 +39,7 @@ code {
   font-weight: 500;
   margin: initial;
 }
+
+.author-box {
+  border: 1px solid rgba(112, 112, 112, 0.18);
+}

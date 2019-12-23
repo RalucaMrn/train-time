@@ -7,7 +7,7 @@ export default class HeaderMenu extends React.Component {
 
     return (
       <Container>
-        <div class="header-menu" alignItems="center">
+        <div className="header-menu">
         <a href="#">
           <h3>TITLE</h3>
         </a>
@@ -16,7 +16,7 @@ export default class HeaderMenu extends React.Component {
             <li><a href="#">Latest news</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Log in</a></li>
-            <li><a href="#"><img src={Language} class="globe" /></a></li>
+            <li><a href="#"><img src={Language} className="globe" /></a></li>
             <li>EN</li>
           </ul>
         </nav>

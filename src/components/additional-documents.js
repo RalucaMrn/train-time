@@ -11,7 +11,7 @@ export default class AdditionalDocuments extends React.Component {
       marginRight: "10px"
     };
 
-    documents.forEach(documentObject => {  
+    documents.forEach((documentObject, i) => {  
       let imgElement = ''
       if (documentObject.type === 'pdf') {
         imgElement = <img src={pdfIcon} />
@@ -19,7 +19,7 @@ export default class AdditionalDocuments extends React.Component {
         imgElement = <img src={docIcon} />
       }
       
-      documentArray.push(<Button variant="outlined" style={divStyle} href={documentObject.url}>{imgElement}{documentObject.name}</Button>)
+      documentArray.push(<Button key={i} variant="outlined" style={divStyle} href={documentObject.url}>{imgElement}{documentObject.name}</Button>)
     })
 
     return documentArray
