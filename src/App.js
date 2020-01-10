@@ -16,6 +16,10 @@ import Box from '@material-ui/core/Box'
 import IncludedItems from './components/included'
 import Counter from './components/counter'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import SocialMedia from './components/social-media'
+import {borders} from '@material-ui/system';
+import {sizing} from '@material-ui/system';
+import TextField from '@material-ui/core/TextField';
 
 class App extends React.Component {
   render() {
@@ -119,7 +123,7 @@ class App extends React.Component {
           </Grid>
 
           <Grid item xs={4}>
-            <div className="sidebar-left">
+            <div className="sidebar-left" marginLeft={4}>
               <Counter />
               <Button variant="contained" size="medium" color="primary">
                 JOIN THIS EVENT
@@ -130,45 +134,49 @@ class App extends React.Component {
                 ADD TO WISHLIST
                 </Button>
 
-              <div>
+              <Box border={2} borderColor="secondary.main">
+                <br />
                 weather widget
-              </div>
-              
-              <div>
-                <p>Share with friends:
-                <img src="facebook" />
-                  <img src="twitter" />
-                  <img src="reddit" />
-                </p>
-              </div>
-              <div>
-                imagine
-          </div>
-              <div>
-                <h5>Participants</h5>
-                <ul>
-                  <li>
-                    <p>Name Surname</p>
-                    <p>Locations</p>
-                  </li>
-                  <li>
-                    <p>Name Surname</p>
-                    <p>Locations</p>
-                  </li>
-                  <li>
-                    <p>Name Surname</p>
-                    <p>Locations</p>
-                  </li>
-                  <li>
-                    <p>Name Surname</p>
-                    <p>Locations</p>
-                  </li>
-                  <li>
-                    <p>Name Surname</p>
-                    <p>Locations</p>
-                  </li>
-                </ul>
-              </div>
+              </Box>
+
+              <Box>
+                <br />
+                Share with friends:<SocialMedia />
+              </Box>
+
+              <Box border={2} borderColor="secondary.main" height={600}>
+                <br />
+                placeholder text
+              </Box>
+
+              <Box border={1} borderColor="707070">
+                <h4>Participants</h4>
+                <Box m={4} borderBottom={2} borderColor="707070">
+                  Name Surname
+                  <br />
+                  Location
+                </Box>
+                <Box m={4} borderBottom={2} borderColor="707070">
+                  Name Surname
+                  <br />
+                  Location
+                </Box>
+                <Box m={4} borderBottom={2} borderColor="707070">
+                  Name Surname
+                  <br />
+                  Location
+                </Box>
+                <Box m={4} borderBottom={2} borderColor="707070">
+                  Name Surname
+                  <br />
+                  Location
+                </Box>
+                <Box m={4} borderBottom={2} borderColor="707070">
+                  Name Surname
+                  <br />
+                  Location
+                </Box>
+              </Box>
 
             </div>
           </Grid>
@@ -177,73 +185,128 @@ class App extends React.Component {
         <AdditionalDocuments documents={entry.additionalDocuments} />
         
         <div class = "waypoints">
-          <h2>List of waypoints - optional depending on event</h2>
-          <div className="waypoint">
-            <img src="" />
-            <h4>Name of the first waypoint</h4>
-            <h4>Location</h4>
-            <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
-          </div>
-          <div className="waypoint">
-            <img src="" />
-            <h4>Name of the first waypoint</h4>
-            <h4>Location</h4>
-            <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
-          </div>
-          <div className="waypoint">
-            <img src="" />
-            <h4>Name of the first waypoint</h4>
-            <h4>Location</h4>
-            <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
-          </div>
-          <div className="waypoint">
-            <img src="" />
-            <h4>Name of the first waypoint</h4>
-            <h4>Location</h4>
-            <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
-          </div>
+          <Box fontSize={34}>List of waypoints - optional depending on event</Box>
+          <Box border={2} borderColor="707070">
+            <Grid container>
+              <Grid item xs={4}></Grid>
+              <Grid items xs={8}>
+                <h4>Name of the first waypoint</h4>
+                <h4>Location</h4>
+                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box border={2} borderColor="707070">
+            <Grid container>
+              <Grid item xs={4}></Grid>
+              <Grid items xs={8}>
+                <h4>Name of the first waypoint</h4>
+                <h4>Location</h4>
+                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box border={2} borderColor="707070">
+            <Grid container>
+              <Grid item xs={4}></Grid>
+              <Grid items xs={8}>
+                <h4>Name of the first waypoint</h4>
+                <h4>Location</h4>
+                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box border={2} borderColor="707070">
+            <Grid container>
+              <Grid item xs={4}></Grid>
+              <Grid items xs={8}>
+                <h4>Name of the first waypoint</h4>
+                <h4>Location</h4>
+                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+              </Grid>
+            </Grid>
+          </Box>
         </div>
+
+
         <div className="reviews">
-          <h1>Reviews</h1>
-          <h3>100 reviews</h3>
-          <p>Route
-              <img src="steluta" />
-          </p>
-          <p>Service
-              <img src="steluta" />
-          </p>
-          <p>Description quality
-              <img src="steluta" />
-          </p>
-          <p>Location
-              <img src="steluta" />
-          </p>
 
-          <div className="your-review">
-            <h1>Your review</h1>
-            <h3>100 reviews</h3>
-            <p>
-Route
-                <img src="steluta" />
-            </p>
-            <p>
-Service
-                <img src="steluta" />
-            </p>
-            <p>
-Description quality
-                <img src="steluta" />
-            </p>
-            <p>
-Location
-                  <img src="steluta" />
-            </p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+          <Box fontSize={34}>Reviews</Box>
+          <h4>100 reviews</h4>
+          
+          <Box fontSize={14}>
+            Route
+            <Rating score={4} max={5}/>
+          </Box>
 
-              <button>Publish</button>
+          <Box fontSize={14}>
+            Service
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box fontSize={14}>
+            Description quality
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box fontSize={14}>
+            Location
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box fontSize={34}>Your review</Box>
+
+          <Box fontSize={14}>
+            Route
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box fontSize={14}>
+            Service
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box fontSize={14}>
+            Description quality
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box fontSize={14}>
+            Location
+            <Rating score={4} max={5} />
+          </Box>
+
+          <Box>
+            <TextField id="outlined-basic" variant="outlined" />
+          </Box>
+          <Box>
+            <Button variant="outlined">Publish</Button>
+          </Box>
+          
+          
+
+
 
             <div className="others-reviews">
+              <Grid container>
+                <Grid item xs={2}>poza</Grid>
+                <Grid item xs={3}>
+                  <ul>
+                    <li>Name Surname</li>
+                    <li>Date</li>
+                    <li>overall rating</li>
+                    <li><Rating score={4} max={5} /></li>
+                  </ul>
+                </Grid>
+                <Grid item xs={7}>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+                  </p>
+                </Grid>
+              </Grid>
               <div>
+              
+              
                 <img />
                 <p>Name Surname</p>
                 <p>Date</p>
@@ -263,7 +326,6 @@ Location
               </div>
             </div>
           </div>
-        </div>
         
 
       </Container>
