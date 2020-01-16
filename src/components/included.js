@@ -9,10 +9,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 
-export default class IncludedItems extends React.Component {
-  
-  generate(items) {
-    return items.map(item => {
+export default function IncludedItems(props) {
+  const listItems = props.items.map(item => {
       let icon = ''
       switch (item) {
         case 'food':
@@ -27,7 +25,8 @@ export default class IncludedItems extends React.Component {
         default:
           icon = <img src='' />
       }
-      return < ListItem >
+
+    return <ListItem>
          <ListItemIcon>
           {icon}
         </ListItemIcon>
@@ -35,20 +34,15 @@ export default class IncludedItems extends React.Component {
           primary={item}
         />
       </ListItem >
-    })
-  }
+    }
+  );
+  
 
-  render() {
-    const items = this.props.items;
-
-    return <div>
+  return <div>
       <h4>Included</h4>
           <List>
-            {this.generate(items)}
+            {listItems}
           </List>
     </div>
-  }
 }
 
-
-{/*  , */}

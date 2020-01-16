@@ -76,12 +76,15 @@ class App extends React.Component {
       <HeaderMenu />
       <Slider />
       <Container>
-        <Grid container>
+        <Grid container spacing={3}>
           <Grid item xs={12}>
           <h2>{entry.title}</h2>
           </Grid>
           <Grid item xs={8}>
-            <Author author={entry.author}/>
+            <div className="row">
+              <Author author={entry.author} />
+            </div>
+            
             <Locations locations={entry.locations}/>
             <IncludedItems items={entry.includedItems}/>
 

@@ -8,48 +8,69 @@ import grey from '@material-ui/core/colors/grey'
 import blueGrey from '@material-ui/core/colors/blueGrey'
 import { borders } from '@material-ui/system'
 import Box from '@material-ui/core/Box'
+import difficultyImg from './../assets/png/difficulty.png'
 
-
-export default class Locations extends React.Component {
-  render() {
-    const locations = this.props.locations
-    const divStyle = {
-      backgroundColor: grey[50],
-      borderColor: blueGrey[200],
-
-    };
-    
-
-    return <Box border={1} border={1} style={divStyle}>
-        <h4>Location</h4>
-        <Grid container >
-          <Grid item xs={5}>
-            <img src={startIcon}/>{locations.start.place}
-            <br />
-            <img src={endIcon} />{locations.end.place}
-          </Grid>
-          <Grid item xs={7}>
-            {locations.start.date}
-            <br />
-            {locations.end.date}
-          </Grid>
-        </Grid>
-        
-        <Grid container>
-          <Grid item xs={5}>
-            <h4>Level of difficulty</h4>
-            {locations.levelOfDifficulty}
-          </Grid>
-          <Grid item xs={7}>
-            <h4>Duration</h4>
-            {locations.duration}
-          </Grid>
-        </Grid>
-        <Grid>
-          <h4>Participants</h4>
-          <img src={maxPart} />{locations.participants.maximum} 
-          <img src={joinedPart} />{locations.participants.joined}
-        </Grid>
-      </Box>
+export default function Locations(props) {
+  const locations = props.locations;
+  const divStyle = {
+    backgroundColor: grey[50],
+    borderColor: blueGrey[200],
+    paddingLeft: 22
   }
-}
+
+  return <Box border={1} border={1} style={divStyle} className="locations">
+        <h4>Location</h4>
+        <div>
+          <div className="location-row">
+            <div className="location-part">
+              <img class="bottom-minus" src={startIcon} />{locations.start.place}
+            </div>
+            <div>
+              {locations.start.date}
+            </div>
+          </div>
+          
+            <div className="location-row">
+              <div className="location-part">
+                <img class="bottom-minus" src={endIcon} />{locations.end.place}
+              </div>
+            <div className="location-part">
+              {locations.end.date}
+            </div>
+            </div>
+        </div>
+
+        <div className="location-row">
+          <div className="location-part">
+            <h4>Level of difficulty</h4>
+          </div>
+          <div>
+            <h4>Duration</h4>
+          </div>
+        </div>
+
+        <div className="location-row">
+          <div className="location-part">
+          <img class="bottom-minus" src={difficultyImg} /> {locations.levelOfDifficulty}
+          </div>
+          <div>
+            {locations.duration}
+          </div>
+        </div>
+        <div>
+        
+      </div>
+       
+      <div>
+        <h4>Participants</h4>
+      </div>
+      <div className="location-row">
+        <div className="location-last">
+          <img src={maxPart} />{locations.participants.maximum}
+        </div>
+        <div className="location-last">
+          <img src={joinedPart} />{locations.participants.joined}
+        </div>
+      </div>
+    </Box>
+  }

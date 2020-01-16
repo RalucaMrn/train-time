@@ -4,16 +4,14 @@ import TwitterButton from './../components/twitter-button.js'
 import RedditButton from './../components/reddit-button.js'
 
 
-export default class SocialMedia extends React.Component{
-  render() {
-    const styles = {
-      float: 'right'
-    }
-
-    return <div style={styles}>
-      <FacebookButton />
-      <TwitterButton />
-      <RedditButton />
-    </div>
+export default function SocialMedia() {
+  const styles = {
+    float: 'right'
   }
+
+  return <div style={styles}>
+    <FacebookButton />
+    <TwitterButton />
+    <RedditButton />
+  </div>
 }

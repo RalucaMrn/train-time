@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from '@material-ui/core/Icon';
 import plusButton from './../assets/png/plus-button.png'
 import minusButton from './../assets/png/minus-button.png'
@@ -9,60 +9,62 @@ import { spacing } from '@material-ui/system';
 import { makeStyles } from '@material-ui/core/styles';
 import RemoveIcon from '@material-ui/icons/Remove';
 
+export default function Counter() {
+  const [count, setCount] = useState(0)
 
-
-export default class Counter extends React.Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0
-    };
-  }
-
-  increment() {
-    this.setState({
-      count: this.state.count + 1
-    });
+  const increment = () => {
+    setCount(count + 1);
   };
 
-  decrement() {
-    if (this.state.count === 0) {
+  const decrement = () => {
+    if (count === 0) {
       return 
     } 
-    this.setState({
-      count: this.state.count - 1
-    });
+    setCount(count - 1);
   };
-  
 
+  const useStyles = makeStyles(theme => ({
+    root: {
+      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      border: 0,
+      borderRadius: 3,
+      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      color: 'white',
+      height: 48,
+      padding: '0 30px',
+    },
 
-  render() {
-    const useStyles = makeStyles(theme => ({
-      margin: {
-        margin: theme.spacing(1),
-      },
-      extendedIcon: {
-        marginRight: theme.spacing(1),
-      },
-    }));
+    margin: {
+      margin: theme.spacing(1),
+      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      border: 0,
+      borderRadius: 3,
+      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      color: 'white',
+      height: 48,
+      padding: '0 30px',
+    },
 
-    return (
+    extendedIcon: {
+      marginRight: theme.spacing(1),
+    },
+  }));
+
+  const classes = useStyles();
+
+  return (
+    <div>
+      <h4>How many guests will come with you?</h4>
+      <span>
+        <Fab className={classes.margin} className='dec' onClick={() => decrement()} variant="outlined" aria-label="add">
+          <RemoveIcon />
+        </Fab>
+        {count}
+        <Fab className='inc' onClick={() => increment()} variant="outlined" aria-label="add">
+          <AddIcon />
+        </Fab>
+      </span>
       
-
-      <div>
-        <h4>How many guests will come with you?</h4>
-        <p>
-          <Fab className='dec' onClick={(e) => this.decrement(e)} variant="outlined" aria-label="add">
-            <RemoveIcon />
-          </Fab>
-          {this.state.count}
-          <Fab className='inc' onClick={(e) => this.increment(e)} variant="outlined" aria-label="add">
-            <AddIcon />
-          </Fab>
-        </p>
-        
-      </div>
-    );
-  }
+    </div>
+  );
 };
