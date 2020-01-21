@@ -11,7 +11,7 @@ export default class FacebookButton extends React.Component {
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 5,
-      marginRight: 3,
+      marginRight: 12,
       float: 'left'
       }
 

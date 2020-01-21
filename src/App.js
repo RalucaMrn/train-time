@@ -20,6 +20,7 @@ import SocialMedia from './components/social-media'
 import {borders} from '@material-ui/system';
 import {sizing} from '@material-ui/system';
 import TextField from '@material-ui/core/TextField';
+import photoReview from './assets/png/photo-review.png';
 
 class App extends React.Component {
   render() {
@@ -55,18 +56,13 @@ class App extends React.Component {
 
       additionalDocuments: [
         {
-          name: 'Document1',
+          name: 'Document',
           type: 'pdf',
           url: 'http://google.com'
         },
         {
-          name: 'Document2',
-          type: 'txt',
-          url: 'http://google.com'
-        },
-        {
-          name: 'Document3',
-          type: 'doc',
+          name: 'Document',
+          type: 'pdf',
           url: 'http://google.com'
         }
       ]
@@ -78,7 +74,7 @@ class App extends React.Component {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-          <h2>{entry.title}</h2>
+            <h2>{entry.title}</h2>
           </Grid>
           <Grid item xs={8}>
             <div className="row">
@@ -86,250 +82,293 @@ class App extends React.Component {
             </div>
             
             <Locations locations={entry.locations}/>
-            <IncludedItems items={entry.includedItems}/>
+
+            <div style={{ border: "1px solid rgba(112, 112, 112, 0.18)", background:"rgba(255, 255, 255, 0.87)", marginTop: "22px"}}>
+              <IncludedItems items={entry.includedItems} />
+            </div>
+            
 
 
             <div className="content">
-              <h4>Included</h4>
-              <p>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
+              <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87)"}}>About event</h4>
+              <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", textAlign: "justify"}}>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
             </p>
             </div>
 
             <div className="content">
-              <h4>Requirements</h4>
-              <p>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
-          </p>
+              <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87)" }}>Requirements</h4>
+              <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", textAlign: "justify" }}>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
+            </p>
             </div>
 
+
             <div className="content">
-              <h4>Requirements</h4>
+              <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87)" }}>Requirements</h4>
               <ul>
-                <li>Condition</li>
-                <li>Condition</li>
-                <li>Condition</li>
-                <li>Condition</li>
-                <li>Condition</li>
+                <li style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.87)"}}>Condition</li>
+                <li style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.87)" }}>Condition</li>
+                <li style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.87)" }}>Condition</li>
+                <li style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.87)" }}>Condition</li>
+                <li style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.87)" }}>Condition</li>
               </ul>
             </div>
 
             <div className="content">
-              <h4>Rules</h4>
-              <p>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
+              <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87)" }}>Rules</h4>
+              <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", textAlign: "justify" }}>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
             </p>
             </div>
 
             <div className="content">
-              <h4>Route description*</h4>
-              <p>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
+              <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87)" }}>Route description</h4>
+              <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", textAlign: "justify" }}>Suspendisse nisi leo, consectetur id dictum et, sagittis a justo. Fusce at condimentum mi. Nulla ante felis, molestie sed ultricies a, elementum quis nulla. Vestibulum vehicula tempus lectus placerat finibus. Quisque feugiat sed sem at faucibus. Aenean ac libero mattis, faucibus sem et, gravida justo. Maecenas dictum lobortis nisi, vel interdum dolor malesuada eu. Nunc facilisis neque sed tortor elementum pretium.In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.
             </p>
             </div>
           </Grid>
-
           <Grid item xs={4}>
-            <div className="sidebar-left" marginLeft={4}>
+            <div className="sidebar-left" marginLeftt={4}>
               <Counter />
-              <Button variant="contained" size="medium" color="primary">
-                JOIN THIS EVENT
-              </Button>
-              <br />
-              <Button color="secondary">
-                <FavoriteBorderIcon></FavoriteBorderIcon>
-                ADD TO WISHLIST
+              
+              <div style={{ textAlign: "center" }} >
+                <Button class="joinEvent" variant="contained" size="medium">
+                  JOIN THIS EVENT
                 </Button>
+              </div>
+              
+              <div style={{ textAlign: "center" }} >
+                <Button color="secondary">
+                  <FavoriteBorderIcon ></FavoriteBorderIcon>
+                  ADD TO WISHLIST
+                </Button>
+              </div>
+              
 
-              <Box border={2} borderColor="secondary.main">
-                <br />
-                weather widget
+              <Box style={{ height: "144px", marginBottom: "44px", textAlign: "center"}} border={2} borderColor="grey.500">
+                <span>Weather Widget</span>
               </Box>
 
-              <Box>
-                <br />
-                Share with friends:<SocialMedia />
+              <div style={{ display: "flex", marginBottom: "43px", justifyContent: "center", alignItems: "center"}}>
+                <span style={{marginRight:"13px"}}>Share with friends:</span>
+                <SocialMedia />
+              </div>
+
+              <Box style={{ height: "600px", backgroundColor: "rgba(112, 112, 112, 0.18)", border: "border: 1px solid rgba(112, 112, 112, 0.18)", marginBottom:"32px"}}>
               </Box>
 
-              <Box border={2} borderColor="secondary.main" height={600}>
-                <br />
-                placeholder text
-              </Box>
+              <Box style={{ border:"1px solid rgba(112, 112, 112, 0.18)"}}>
+                <h4 style={{ marginLeft: "20px", fontSize: "24px", color: "rgba(0, 0, 0, 0.87)"}}>Participants</h4>
+                <Box m={4} style={{borderBottom:"1px solid rgba(112, 112, 112, 0.18)"}}>
+                  <span style={{fontSize: "16px", paddingBottom:"5px"}}>Name Surname</span>
+                  <br />
+                  <span style={{ color: "rgba(0, 0, 0, 0.6)", fontSize: "14px", marginBottom:"15px" }}>Location</span>
+                </Box>
 
-              <Box border={1} borderColor="707070">
-                <h4>Participants</h4>
-                <Box m={4} borderBottom={2} borderColor="707070">
-                  Name Surname
+                <Box m={4} style={{ borderBottom: "1px solid rgba(112, 112, 112, 0.18)" }}>
+                  <span style={{ fontSize: "16px", paddingBottom: "5px" }}>Name Surname</span>
                   <br />
-                  Location
+                  <span style={{ color: "rgba(0, 0, 0, 0.6)", fontSize: "14px", marginBottom: "15px" }}>Location</span>
                 </Box>
-                <Box m={4} borderBottom={2} borderColor="707070">
-                  Name Surname
+
+                <Box m={4} style={{ borderBottom: "1px solid rgba(112, 112, 112, 0.18)" }}>
+                  <span style={{ fontSize: "16px", paddingBottom: "5px" }}>Name Surname</span>
                   <br />
-                  Location
+                  <span style={{ color: "rgba(0, 0, 0, 0.6)", fontSize: "14px", marginBottom: "15px" }}>Location</span>
                 </Box>
-                <Box m={4} borderBottom={2} borderColor="707070">
-                  Name Surname
+
+                <Box m={4} style={{ borderBottom: "1px solid rgba(112, 112, 112, 0.18)" }}>
+                  <span style={{ fontSize: "16px", paddingBottom: "5px" }}>Name Surname</span>
                   <br />
-                  Location
+                  <span style={{ color: "rgba(0, 0, 0, 0.6)", fontSize: "14px", marginBottom: "15px" }}>Location</span>
                 </Box>
-                <Box m={4} borderBottom={2} borderColor="707070">
-                  Name Surname
+
+                <Box m={4} style={{ borderBottom: "1px solid rgba(112, 112, 112, 0.18)" }}>
+                  <span style={{ fontSize: "16px", paddingBottom: "5px" }}>Name Surname</span>
                   <br />
-                  Location
-                </Box>
-                <Box m={4} borderBottom={2} borderColor="707070">
-                  Name Surname
-                  <br />
-                  Location
+                  <span style={{ color: "rgba(0, 0, 0, 0.6)", fontSize: "14px", marginBottom: "15px" }}>Location</span>
                 </Box>
               </Box>
-
             </div>
           </Grid>
         </Grid>
 
         <AdditionalDocuments documents={entry.additionalDocuments} />
         
-        <div class = "waypoints">
-          <Box fontSize={34}>List of waypoints - optional depending on event</Box>
-          <Box border={2} borderColor="707070">
+        <div class = "waypoints" height = "211px">
+          <h2 style={{ fontSize: "34px", lineHeight: "40px", color: "rgba(42, 38, 38, 0.87)", marginBottom: "25px"}}>List of waypoints - optional depending on event</h2>
+          <Box style={{ border: "1px solid rgba(112, 112, 112, 0.28)", marginBottom: "22px"}}>
             <Grid container>
               <Grid item xs={4}></Grid>
               <Grid items xs={8}>
-                <h4>Name of the first waypoint</h4>
-                <h4>Location</h4>
-                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", marginBottom: "15px", fontWeight: "normal"}}>Name of the first waypoint</h4>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", fontWeight: "normal",marginBottom: "15px", marginTop: "0" }}>Location</h4>
+                <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", marginBottom: "64px", marginRight: "16px", textAlign: "justify" }}>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
               </Grid>
             </Grid>
           </Box>
-          <Box border={2} borderColor="707070">
+
+          <Box style={{ border: "1px solid rgba(112, 112, 112, 0.28)", marginBottom: "22px" }}>
             <Grid container>
               <Grid item xs={4}></Grid>
               <Grid items xs={8}>
-                <h4>Name of the first waypoint</h4>
-                <h4>Location</h4>
-                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", marginBottom: "15px", fontWeight: "normal" }}>Name of the first waypoint</h4>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", fontWeight: "normal", marginBottom: "15px", marginTop: "0" }}>Location</h4>
+                <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", marginBottom: "64px", marginRight: "16px", textAlign: "justify" }}>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
               </Grid>
             </Grid>
           </Box>
-          <Box border={2} borderColor="707070">
+
+          <Box style={{ border: "1px solid rgba(112, 112, 112, 0.28)", marginBottom: "22px" }}>
             <Grid container>
               <Grid item xs={4}></Grid>
               <Grid items xs={8}>
-                <h4>Name of the first waypoint</h4>
-                <h4>Location</h4>
-                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", marginBottom: "15px", fontWeight: "normal" }}>Name of the first waypoint</h4>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", fontWeight: "normal", marginBottom: "15px", marginTop: "0" }}>Location</h4>
+                <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", marginBottom: "64px", marginRight: "16px", textAlign: "justify" }}>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
               </Grid>
             </Grid>
           </Box>
-          <Box border={2} borderColor="707070">
+
+          <Box style={{ border: "1px solid rgba(112, 112, 112, 0.28)", marginBottom: "22px" }}>
             <Grid container>
               <Grid item xs={4}></Grid>
               <Grid items xs={8}>
-                <h4>Name of the first waypoint</h4>
-                <h4>Location</h4>
-                <p>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", marginBottom: "15px", fontWeight: "normal" }}>Name of the first waypoint</h4>
+                <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.87)", fontWeight: "normal", marginBottom: "15px", marginTop: "0" }}>Location</h4>
+                <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", marginBottom: "64px", marginRight: "16px", textAlign: "justify" }}>In vehicula ut enim vitae dapibus. Cras auctor interdum lorem, a consequat massa rutrum in. Morbi turpis nisi, feugiat eu nunc nec, laoreet aliquet quam. Duis molestie porta elementum. Integer nisi nisl, facilisis in semper a, condimentum id urna.</p>
               </Grid>
             </Grid>
           </Box>
         </div>
 
 
-        <div className="reviews">
-
-          <Box fontSize={34}>Reviews</Box>
-          <h4>100 reviews</h4>
+        <div className="reviews" style={{marginLeft:"145px"}}>
+          <h2 style={{ fontSize: "40px", lineHeight: "47px", color: "rgba(0, 0, 0, 0.6)", marginBottom: "15px", fontWeight: "normal"}}>Reviews</h2>
+          <h4 style={{ fontSize: "24px", lineHeight: "28px", color: "rgba(0, 0, 0, 0.6)", marginTop: "15px", fontWeight: "normal"}}>100 reviews</h4>
           
-          <Box fontSize={14}>
-            Route
-            <Rating score={4} max={5}/>
-          </Box>
+          <Grid container>
+            <Grid item={6}>
+              <div style={{width: "300px", marginRight:  "50px"}}>
+                <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between"}}>
+                  <span style={{fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)"}}>Route</span>
+                  <Rating style={{ alignSelf: "center" }}score={4} max={5} />
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between"}}>
+                    <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Service</span>
+                    <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                  </div>
+                </div>
+              </div>
+            </Grid>
 
-          <Box fontSize={14}>
-            Service
-            <Rating score={4} max={5} />
-          </Box>
+            <Grid item={6}>
+              <div style={{ width: "300px", marginRight: "50px" }}>
+                <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between" }}>
+                  <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Description quality</span>
+                  <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between" }}>
+                    <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Location</span>
+                    <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                  </div>
+                </div>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
 
-          <Box fontSize={14}>
-            Description quality
-            <Rating score={4} max={5} />
-          </Box>
+          <div className="your-review" style={{ marginLeft: "145px" }}>
+            <h2 style={{ fontSize: "40px", lineHeight: "47px", color: "rgba(0, 0, 0, 0.6)", marginBottom: "15px", fontWeight: "normal" }}>Your review</h2>
 
-          <Box fontSize={14}>
-            Location
-            <Rating score={4} max={5} />
-          </Box>
-
-          <Box fontSize={34}>Your review</Box>
-
-          <Box fontSize={14}>
-            Route
-            <Rating score={4} max={5} />
-          </Box>
-
-          <Box fontSize={14}>
-            Service
-            <Rating score={4} max={5} />
-          </Box>
-
-          <Box fontSize={14}>
-            Description quality
-            <Rating score={4} max={5} />
-          </Box>
-
-          <Box fontSize={14}>
-            Location
-            <Rating score={4} max={5} />
-          </Box>
-
-          <Box>
-            <TextField id="outlined-basic" variant="outlined" />
-          </Box>
-          <Box>
-            <Button variant="outlined">Publish</Button>
-          </Box>
-          
-          
-
-
-
-            <div className="others-reviews">
-              <Grid container>
-                <Grid item xs={2}>poza</Grid>
-                <Grid item xs={3}>
-                  <ul>
-                    <li>Name Surname</li>
-                    <li>Date</li>
-                    <li>overall rating</li>
-                    <li><Rating score={4} max={5} /></li>
-                  </ul>
-                </Grid>
-                <Grid item xs={7}>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
-                  </p>
-                </Grid>
+            <Grid container>
+              <Grid item={6}>
+                <div style={{ width: "300px", marginRight: "50px" }}>
+                  <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between" }}>
+                    <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Route</span>
+                    <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                  </div>
+                  <div>
+                    <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Service</span>
+                      <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                    </div>
+                  </div>
+                </div>
               </Grid>
+
+              <Grid item={6}>
+                <div style={{ width: "300px", marginRight: "50px" }}>
+                  <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between" }}>
+                    <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Description quality</span>
+                    <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                  </div>
+                  <div>
+                    <div style={{ display: "flex", alignContent: "center", marginBottom: "20px", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "14px", lineHeight: "16px", color: "rgba(0, 0, 0, 0.6)" }}>Location</span>
+                      <Rating style={{ alignSelf: "center" }} score={4} max={5} />
+                    </div>
+                  </div>
+                </div>
+              </Grid>
+            </Grid>
+            
+            <div display="flex">
               <div>
-              
-              
-                <img />
-                <p>Name Surname</p>
-                <p>Date</p>
-                <p>overall rating</p>
-                <img src="steluta" />
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
-                  </p>
+                <TextField id="outlined-basic" variant="outlined" style={{ width: "-webkit - fill - available", border: "1px solid rgba(112, 112, 112, 0.18)", marginBottom:"20px" }} />
               </div>
-              <div>
-                <img />
-                <p>Name Surname</p>
-                <p>Date</p>
-                <p>overall rating</p>
-                <img src="steluta" />
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
-                </p>
-              </div>
+              <Button variant="outlined" style={{ border: "1px solid #007FFE", fontWeight: "normal",
+              fontSize: "14px", lineHeight: "16px", alignText: "right", color: "rgba(0, 0, 0, 0.6)", marginBottom: "145px"}}>Publish</Button>
             </div>
+    
           </div>
-        
+          
+          
+          
+          
+
+
+
+          <div className="others-reviews" style={{marginLeft:"145px"}}>
+            <Grid container>
+              <Grid item xs={2} style={{alignSelf:"center"}}><img src={photoReview}/></Grid>
+              <Grid item xs={3} style={{ alignSelf: "center" }}>
+                <ul style={{ listStyle: "none", fontStyle: "normal", fontWeight: "500", fontSize: "18px", 
+                lineHeight: "21px", color: "rgba(0, 0, 0, 0.6)"}} >
+                  <li style= {{paddingBottom: "5px"}}>Name Surname</li>
+                  <li style={{ paddingBottom: "5px" }}>Date</li>
+                  <li style={{ paddingBottom: "5px" }}>overall rating</li>
+                  <li style= {{ paddingBottom: "5px" }}><Rating score={4} max={5} /></li>
+                </ul>
+              </Grid>
+              <Grid item xs={7} style={{ alignSelf: "center" }}>
+                <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", textAlign: "justify"}}>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+                </p>
+              </Grid>
+            </Grid>
+
+            <Grid container>
+              <Grid item xs={2} style={{ alignSelf: "center" }}><img src={photoReview} /></Grid>
+              <Grid item xs={3} style={{ alignSelf: "center" }}>
+                <ul style={{
+                  listStyle: "none", fontStyle: "normal", fontWeight: "500", fontSize: "18px",
+                  lineHeight: "21px", color: "rgba(0, 0, 0, 0.6)"
+                }} >
+                  <li style={{ paddingBottom: "5px" }}>Name Surname</li>
+                  <li style={{ paddingBottom: "5px" }}>Date</li>
+                  <li style={{ paddingBottom: "5px" }}>overall rating</li>
+                  <li style={{ paddingBottom: "5px" }}><Rating score={4} max={5} /></li>
+                </ul>
+              </Grid>
+              <Grid item xs={7} style={{ alignSelf: "center" }}>
+                <p style={{ fontSize: "16px", lineHeight: "19px", color: "rgba(0, 0, 0, 0.6)", textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+                  </p>
+              </Grid>
+            </Grid>
+          </div>
+           
 
       </Container>
     </div>

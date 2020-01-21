@@ -11,20 +11,20 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 export default function IncludedItems(props) {
   const listItems = props.items.map(item => {
-      let icon = ''
-      switch (item) {
-        case 'food':
-          icon = <img src={foodImg} />
-          break;
-        case 'drinks':
-          icon = <img src={drinksImg} />
-          break;
-        case 'equipment':
-          icon = <img src={drinksImg} />
-          break;
-        default:
-          icon = <img src='' />
-      }
+    let icon = ''
+    switch (item) {
+      case 'food':
+        icon = <img src={foodImg} />
+        break;
+      case 'drinks':
+        icon = <img src={drinksImg} />
+        break;
+      case 'equipment':
+        icon = <img src={drinksImg} />
+        break;
+      default:
+        icon = <img src='' />
+    }
 
     return <ListItem>
          <ListItemIcon>
@@ -39,10 +39,10 @@ export default function IncludedItems(props) {
   
 
   return <div>
-      <h4>Included</h4>
-          <List>
-            {listItems}
-          </List>
+    <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87", paddingLeft: "22px"}}>Included</h4>
+    <List style={{ fontSize: "16px", color: "rgba(0, 0, 0, 0.87", paddingLeft: "22px" }}>
+      {listItems}
+    </List>
     </div>
 }
 

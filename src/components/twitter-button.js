@@ -10,7 +10,9 @@ export default class TwitterButton extends React.Component {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      float: 'left'
+      float: 'left',
+      borderRadius: 5,
+      marginRight: 12
       }
 
   return <div className='facebook' style={styles}>
