@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import StarGray from './../assets/svg/star-gray.svg'
 import StarGold from './../assets/svg/star-gold.svg'
 
@@ -12,6 +12,6 @@ export default function Star(props) {
   }
   
   return (
-    <img src={imageSource} />
+    <img src={imageSource} alt=""/>
   );
 }

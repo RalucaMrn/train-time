@@ -16,7 +16,7 @@ export default class TwitterButton extends React.Component {
       }
 
   return <div className='facebook' style={styles}>
-      <img src={twitter} />
+      <img src={twitter} alt=""/>
     </div>
   }
 }

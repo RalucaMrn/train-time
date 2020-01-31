@@ -1,12 +1,10 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
 import startIcon from './../assets/png/location-start.png'
 import endIcon from './../assets/png/location-end.png'
 import maxPart from './../assets/png/max-part.png'
 import joinedPart from './../assets/png/joined-part.png'
 import grey from '@material-ui/core/colors/grey'
 import blueGrey from '@material-ui/core/colors/blueGrey'
-import { borders } from '@material-ui/system'
 import Box from '@material-ui/core/Box'
 import difficultyImg from './../assets/png/difficulty.png'
 
@@ -18,12 +16,12 @@ export default function Locations(props) {
     paddingLeft: 22
   }
 
-  return <Box border={1} border={1} style={divStyle} className="locations">
+  return <Box border={1} style={divStyle} className="locations">
         <h4>Location</h4>
         <div>
           <div className="location-row">
             <div className="location-part">
-              <img class="bottom-minus" src={startIcon} />{locations.start.place}
+              <img className="bottom-minus" src={startIcon} alt=""/>{locations.start.place}
             </div>
             <div>
               {locations.start.date}
@@ -32,11 +30,11 @@ export default function Locations(props) {
           
             <div className="location-row">
               <div className="location-part">
-                <img class="bottom-minus" src={endIcon} />{locations.end.place}
+                <img className="bottom-minus" src={endIcon} alt=""/>{locations.end.place}
               </div>
-            <div className="location-part">
-              {locations.end.date}
-            </div>
+              <div className="location-part">
+                {locations.end.date}
+              </div>
             </div>
         </div>
 
@@ -51,7 +49,7 @@ export default function Locations(props) {
 
         <div className="location-row">
           <div className="location-part">
-          <img class="bottom-minus" src={difficultyImg} /> {locations.levelOfDifficulty}
+            <img className="bottom-minus" src={difficultyImg} alt=""/> {locations.levelOfDifficulty}
           </div>
           <div>
             {locations.duration}
@@ -66,10 +64,10 @@ export default function Locations(props) {
       </div>
       <div className="location-row">
         <div className="location-last">
-          <img src={maxPart} />{locations.participants.maximum}
+          <img src={maxPart} alt=""/>{locations.participants.maximum}
         </div>
         <div className="location-last">
-          <img src={joinedPart} />{locations.participants.joined}
+          <img src={joinedPart} alt=""/>{locations.participants.joined}
         </div>
       </div>
     </Box>

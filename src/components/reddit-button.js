@@ -16,7 +16,7 @@ export default class RedditButton extends React.Component {
       }
 
   return <div className='facebook' style={styles}>
-      <img src={reddit} />
+      <img src={reddit} alt=""/>
     </div>
   }
 }

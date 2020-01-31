@@ -1,9 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import foodImg from './../assets/png/food.png'
 import drinksImg from './../assets/png/drinks.png'
 import List from '@material-ui/core/List';
-import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -14,19 +12,19 @@ export default function IncludedItems(props) {
     let icon = ''
     switch (item) {
       case 'food':
-        icon = <img src={foodImg} />
+        icon = <img src={foodImg} alt=""/>
         break;
       case 'drinks':
-        icon = <img src={drinksImg} />
+        icon = <img src={drinksImg} alt=""/>
         break;
       case 'equipment':
-        icon = <img src={drinksImg} />
+        icon = <img src={drinksImg} alt=""/>
         break;
       default:
-        icon = <img src='' />
+        icon = <img src='' alt=""/>
     }
 
-    return <ListItem>
+    return <ListItem key={item}>
          <ListItemIcon>
           {icon}
         </ListItemIcon>
@@ -38,9 +36,9 @@ export default function IncludedItems(props) {
   );
   
 
-  return <div>
-    <h4 style={{ fontSize: "24px", color: "rgba(0, 0, 0, 0.87", paddingLeft: "22px"}}>Included</h4>
-    <List style={{ fontSize: "16px", color: "rgba(0, 0, 0, 0.87", paddingLeft: "22px" }}>
+  return <div className="included-list">
+    <h4>Included</h4>
+    <List>
       {listItems}
     </List>
     </div>

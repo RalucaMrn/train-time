@@ -6,15 +6,15 @@ export default function HeaderMenu() {
   return (
     <Container>
       <div className="header-menu">
-      <a href="#">
-        <h3>TITLE</h3>
-      </a>
+        <a href="https://www.google.com/">
+          <h3>TITLE</h3>
+        </a>
       <nav>
         <ul>
-          <li><a href="#">Latest news</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Log in</a></li>
-          <li><a href="#"><img src={Language} className="globe" /> EN</a></li>
+          <li><a href="https://www.google.com/">Latest news</a></li>
+          <li><a href="https://www.google.com/">About</a></li>
+          <li><a href="https://www.google.com/">Log in</a></li>
+          <li><a href="https://www.google.com/"><img src={Language} className="globe" alt=""/> EN</a></li>
         </ul>
       </nav>
     </div>

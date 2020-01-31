@@ -16,7 +16,7 @@ export default class FacebookButton extends React.Component {
       }
 
   return <div className='facebook' style={styles}>
-      <img src={facebook} />
+      <img src={facebook} alt=""/>
     </div>
   }
 }
